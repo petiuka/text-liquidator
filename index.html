@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>/\NKB[i]D4T0P T3Kc7@</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 105vh;
+      margin: 0;
+      background-color: #f1f1f1;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      margin-bottom: 5px;
+    }
+    .output-image {
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    textarea {
+      margin: 10px;
+      width: 300px;
+      height: 50px;
+      min-width: 250px;
+      min-height: 50px;
+      max-width: 450px;
+      max-height: 250px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      resize: both;
+      overflow: auto;
+      border: none;
+      outline: none;
+    }
+
+    .button-regular {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      background-color: #eeeeee;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .button-regular:hover {
+      transform: scale(0.95);
+    }
+
+    .button-regular:active {
+      transform: scale(1.3);
+      transition: transform 1.5s ease-in-out;
+    }
+input[type="text"],
+input[type="number"] {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 5px 0;
+}
+
+.checkbox-wrapper-45 {
+  display: flex;
+  margin: 15px;
+  align-items: center;
+}
+.checkbox-wrapper-45 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+.checkbox-wrapper-45 .cbx {
+  -webkit-perspective: 20;
+  perspective: 20;
+  display: inline-block;
+  border: 2px solid #e8e8eb;
+  background: #e8e8eb;
+  border-radius: 4px;
+  transform: translate3d(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.checkbox-wrapper-45 .cbx:hover {
+  border-color: #0b76ef;
+}
+.checkbox-wrapper-45 .flip {
+  display: block;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.checkbox-wrapper-45 input[type="checkbox"]:checked + .cbx {
+  border-color: #0b76ef;
+}
+.checkbox-wrapper-45 input[type="checkbox"]:checked + .cbx .flip {
+  transform: rotateY(180deg);
+}
+.checkbox-wrapper-45 .front,
+.checkbox-wrapper-45 .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+.checkbox-wrapper-45 .front {
+  background: #fff;
+  z-index: 1;
+}
+.checkbox-wrapper-45 .back {
+  transform: rotateY(180deg);
+  background: #0b76ef;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  box-shadow: 0 0 0 1px #0b76ef;
+}
+.checkbox-wrapper-45 .back svg {
+  margin-top: 3px;
+  fill: none;
+}
+.checkbox-wrapper-45 .back svg path {
+  stroke: #fff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.checkbox-label {
+  user-select: none;
+  cursor: pointer;
+  margin-left: 10px;
+  line-height: 20px;
+}
+select {
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+    .MainOutput {
+      margin: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      background-color: #f9f9f9;
+      width: 100%;
+      text-align: center;
+      white-space: pre-wrap;
+    }
+  </style>
+  <script>
+    var saveold
+    function handleSecondPartProtectCheckbox() {
+        if(saveold !== true) {
+            saveold = true
+        } else {
+            saveold = false
+        }
+    }
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+function globalEncode() {
+var text1 = document.getElementById("MainInput").value.toLowerCase()
+function splitWord(word) {
+    return word.split('');
+  }
+  function joinWord(letters) {
+    return letters.join('');
+  }
+var letters = splitWord(text1);
+for (var i = 0; i < letters.length; i++) {
+if (letters[i].includes("л")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/л/g, "/\\")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/л/g, "[L]")} else {letters[i] = letters[i].replace(/л/g, "JI");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("й")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/й/g, "|/|'")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/й/g, "[y]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/й/g, "№");} else {letters[i] = letters[i].replace(/й/g, "N'");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ц")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ц/g, "U.")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ц/g, "[c]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ц/g, "u_");} else {letters[i] = letters[i].replace(/ц/g, "|_|.");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("у")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/у/g, "y")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/у/g, "[u]")} else {letters[i] = letters[i].replace(/у/g, "Y");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("к")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/к/g, "k")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/к/g, "[k]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/к/g, "K");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/к/g, "1<");} else {letters[i] = letters[i].replace(/к/g, "|<");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("е")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/е/g, "3")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/е/g, "[e]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/е/g, "e");} else {letters[i] = letters[i].replace(/е/g, "E");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ё")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ё/g, "3")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ё/g, "[e]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ё/g, "e");} else {letters[i] = letters[i].replace(/ё/g, "E");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("н")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/н/g, "H")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/н/g, "|-|");} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/н/g, "[n]")} else {letters[i] = letters[i].replace(/н/g, "/-/");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("г")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/г/g, "7")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/г/g, "[g]")} else {letters[i] = letters[i].replace(/г/g, "|‾");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ш")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ш/g, "III")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ш/g, "[sh]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ш/g, "I_I_I");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ш/g, "|_|_|");} else {letters[i] = letters[i].replace(/ш/g, "111");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("щ")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/щ/g, "III_")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/щ/g, "I_I_I_");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/щ/g, "|_|_|_");} else {letters[i] = letters[i].replace(/щ/g, "111_");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("з")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/з/g, "3")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/з/g, "[z]")} else {letters[i] = letters[i].replace(/з/g, "≡}");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("х")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/х/g, "X")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/х/g, "[h]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/х/g, "x");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/х/g, "}{");} else {letters[i] = letters[i].replace(/х/g, "><");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ф")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ф/g, "o|o")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ф/g, "[f]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ф/g, "0|0");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ф/g, "{}1{}");} else {letters[i] = letters[i].replace(/ф/g, "O|O");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ы")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ы/g, "b1")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ы/g, "[yi]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ы/g, "b|");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ф/g, "61");} else {letters[i] = letters[i].replace(/ф/g, "|01");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("в")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/в/g, "B")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/в/g, "[v]")} else {letters[i] = letters[i].replace(/в/g, "|8");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("а")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/а/g, "@")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/а/g, "[a]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/а/g, "4");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/а/g, "a");} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/а/g, "/-\\");} else {letters[i] = letters[i].replace(/а/g, "A");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("п")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/п/g, "II")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/п/g, "[p]")} else {letters[i] = letters[i].replace(/п/g, "||");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("р")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/р/g, "P")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/р/g, "[r]")} else {letters[i] = letters[i].replace(/р/g, "p");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("о")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/о/g, "0")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/о/g, "[o]")} else {letters[i] = letters[i].replace(/о/g, "o");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("д")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/д/g, "D")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/д/g, "[d]")} else {letters[i] = letters[i].replace(/д/g, "d");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ъ")) {
+    letters[i] = letters[i].replace(/ъ/g, "‾b")
+    console.log(letters[i]);
+}
+if (letters[i].includes("ж")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ж/g, "}|{")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ж/g, "[zh]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/ж/g, "]|[");} else {letters[i] = letters[i].replace(/ж/g, ">|<");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("э")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/э/g, "3")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/э/g, "[e]")} else {letters[i] = letters[i].replace(/э/g, "≡}");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("я")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/я/g, "9|")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/я/g, "[ya]")} else {letters[i] = letters[i].replace(/я/g, "R");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ч")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ч/g, "4")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/ч/g, "[ch]")} else {letters[i] = letters[i].replace(/ч/g, "4");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("м")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/м/g, "M")} else if(getRandomInt(100) > 98){letters[i] = letters[i].replace(/м/g, "[m]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/м/g, "m");} else {letters[i] = letters[i].replace(/м/g, "/\\/\\");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("и")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/и/g, "N")} else if(getRandomInt(100) > 95){letters[i] = letters[i].replace(/и/g, "[i]")} else if(getRandomInt(10) > 5) {letters[i] = letters[i].replace(/и/g, "|/|");} else {letters[i] = letters[i].replace(/и/g, "1/1");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("с")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/с/g, "C")} else if(getRandomInt(100) > 95){letters[i] = letters[i].replace(/с/g, "[s]")} else {letters[i] = letters[i].replace(/с/g, "c");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("т")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/т/g, "7")} else if(getRandomInt(100) > 95){letters[i] = letters[i].replace(/т/g, "[t]")} else {letters[i] = letters[i].replace(/т/g, "T");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ь")) {
+    letters[i] = letters[i].replace(/ь/g, "b")
+    console.log(letters[i]);
+}
+if (letters[i].includes("б")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/б/g, "6")} else if(getRandomInt(100) > 95){letters[i] = letters[i].replace(/б/g, "[b]")} else {letters[i] = letters[i].replace(/б/g, "b");}
+    console.log(letters[i]);
+}
+if (letters[i].includes("ю")) {
+    if(getRandomInt(10) > 5){letters[i] = letters[i].replace(/ю/g, "|-0")} else if(getRandomInt(100) > 95){letters[i] = letters[i].replace(/ю/g, "[yu]")} else {letters[i] = letters[i].replace(/ю/g, "|0");}
+    console.log(letters[i]);
+}
+}
+var modifiedWord = joinWord(letters);
+if(saveold !== true) {
+MainOutput.textContent = modifiedWord
+} else {
+    MainOutput.textContent = modifiedWord + "\n" + MainOutput.textContent
+}
+}
+function copyToClipboard() {
+      var mainOutput = document.getElementById("MainOutput");
+      var textToCopy = mainOutput.textContent;
+      var tempTextarea = document.createElement("textarea");
+      tempTextarea.value = textToCopy;
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempTextarea);
+
+    }
+function loadTextFile() {
+  const fileInput = document.getElementById("fileInput");
+  fileInput.click();
+  fileInput.addEventListener("change", function () {
+    const file = fileInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const content = e.target.result;
+        const mainInput = document.getElementById("MainInput");
+        mainInput.value = content;
+      };
+
+      reader.readAsText(file);
+    }
+  });
+}
+
+  </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>/\NKB[i]D4T0R T3Kc7@</h1>
+      <h2>Input</h2>
+      <div>
+        <input class="button-regular" type="file" id="fileInput" accept=".txt" style="display: none;">
+        <button class="button-regular" role="button" onclick="loadTextFile()">Import text from file</button>
+      </div>
+      <textarea id="MainInput" placeholder="Enter text"></textarea>
+      <div>
+        <button class="button-regular" role="button" onclick="globalEncode()">/\NkB[i]DNP0B4Tb</button>
+      </div>  
+      <h2>Output</h2>
+      <div class="MainOutput" id="MainOutput"></div>
+      <button class="button-regular" role="button" onclick="copyToClipboard()">Copy to Clipboard</button>
+      <div class="checkbox-wrapper-45">
+        <input id="SecondPartProtectCheckbox" type="checkbox" onchange="handleSecondPartProtectCheckbox()">
+        <label class="cbx" for="SecondPartProtectCheckbox">
+          <div class="flip">
+            <div class="front"></div>
+            <div class="back">
+              <svg width="16" height="14" viewBox="0 0 16 14">
+                <path d="M2 8.5L6 12.5L14 1.5"></path>
+              </svg>
+            </div>
+          </div>
+        </label>
+        <label for="SecondPartProtectCheckbox" class="checkbox-label">Save past results</label>
+      </div>
+    </div>  
+  </div>
+</body>
+</html>
